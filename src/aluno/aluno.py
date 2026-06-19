@@ -29,5 +29,9 @@ class Aluno:
             return "Aprovado"
         return "Reprovado por nota"
 
+    def enviar_boletim(self, email_service) -> None:
+        if self.situacao() == "Reprovado":
+            email_service.enviar(self.nome, self.calcular_media())
+
     def calcular_media_arredondada(self) -> float:
         return round(sum(self.notas) / len(self.notas))
