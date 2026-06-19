@@ -30,6 +30,12 @@ def test_menor_nota():
 
     assert menorNotaAlunoTeste == menorNotaAlunoAtual
 
+def test_calcular_media_arredondada():
+    alunoTeste = Aluno("aluno teste", [7, 8, 8], 0)
+    mediaArredondada = alunoTeste.calcular_media_arredondada()
+
+    assert mediaArredondada == 8
+
 # =============================================================
 # PARTE 2 — Implemente com TDD
 # Siga o ciclo: 🔴 escreva o teste → 🟢 implemente → 🟡 refatore
