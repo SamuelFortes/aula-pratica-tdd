@@ -23,6 +23,13 @@ def test_situacao():
 
     assert alunoComMediaSeis == "Aprovado"
 
+def test_menor_nota():
+    alunoTeste = Aluno("aluno teste", [6, 6, 6, 7], 3)
+    menorNotaAlunoTeste = min(alunoTeste.notas)
+    menorNotaAlunoAtual = alunoTeste.menor_nota()
+
+    assert menorNotaAlunoTeste == menorNotaAlunoAtual
+
 # =============================================================
 # PARTE 2 — Implemente com TDD
 # Siga o ciclo: 🔴 escreva o teste → 🟢 implemente → 🟡 refatore
