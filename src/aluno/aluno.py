@@ -22,5 +22,12 @@ class Aluno:
     def menor_nota(self) -> float:
         return min(self.notas)
 
+    def situacao_final(self, total_aulas: int) -> str:
+        if self.faltas / total_aulas > 0.25:
+            return "Reprovado por falta"
+        if self.calcular_media() >= 6.0:
+            return "Aprovado"
+        return "Reprovado por nota"
+
     def calcular_media_arredondada(self) -> float:
         return round(sum(self.notas) / len(self.notas))
