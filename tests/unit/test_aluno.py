@@ -17,6 +17,12 @@ def test_calcular_media():
 
     assert CalculoDaMediaAtual == CalculoDaMediaDoTeste
 
+def test_situacao():
+    alunoTeste = Aluno("aluno teste", [6, 6, 6, 6], 3)
+    alunoComMediaSeis = alunoTeste.situacao()
+
+    assert alunoComMediaSeis == "Aprovado"
+
 # =============================================================
 # PARTE 2 — Implemente com TDD
 # Siga o ciclo: 🔴 escreva o teste → 🟢 implemente → 🟡 refatore
