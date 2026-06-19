@@ -8,7 +8,14 @@ from aluno.aluno import Aluno
 # Escreva um teste para cada bug descrito no guia da atividade.
 # =============================================================
 
-#
+def test_calcular_media():
+    alunoTeste = Aluno("aluno teste", [10, 9, 7, 7, 6], 3)
+    somatorioNotasALuno = sum(alunoTeste.notas)
+    quantNotasAluno = len(alunoTeste.notas)
+    CalculoDaMediaDoTeste = somatorioNotasALuno /quantNotasAluno
+    CalculoDaMediaAtual = alunoTeste.calcular_media()
+
+    assert CalculoDaMediaAtual == CalculoDaMediaDoTeste
 
 # =============================================================
 # PARTE 2 — Implemente com TDD
